@@ -4004,3 +4004,290 @@ p {
         box-sizing: border-box;
     }
 }
+/* =========================================
+   AJUSTES GERAIS PARA CELULARES
+   COMVIMA
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Evita que elementos ultrapassem a tela */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    /* Cabeçalho e navegação */
+    header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    header img {
+        width: 75px;
+        max-width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    header > .botao {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Seções: menos espaço nas laterais */
+    .hero,
+    .sobre,
+    .impacto,
+    .projetos,
+    .transforma,
+    .participar,
+    .galeria,
+    .ajudar,
+    .sobre-hero,
+    .historia,
+    .nova-fase,
+    .onde-musica,
+    .o-que-e,
+    .atuacao,
+    .geracoes,
+    .proposito {
+        padding: 45px 22px;
+    }
+
+    /* Banner inicial */
+    .hero {
+        min-height: 480px;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .hero h1 {
+        font-size: clamp(28px, 7vw, 36px);
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-botoes .botao {
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+    }
+
+    /* Títulos e linhas decorativas */
+    .titulo-secao h2,
+    .sobre h2,
+    .transforma-texto h2,
+    .participar h2,
+    .sobre-hero h1,
+    .historia h2,
+    .nova-fase h2,
+    .o-que-e h2,
+    .atuacao h2,
+    .onde-musica h2,
+    .geracoes h2,
+    .proposito h2 {
+        font-size: clamp(25px, 6vw, 32px);
+        line-height: 1.3;
+    }
+
+    .titulo-secao h2::after,
+    .titulo-pagina::after,
+    .linha-bronze,
+    .participar .linha-bronze {
+        width: min(100%, 350px);
+    }
+
+    /* Conteúdos com imagem e texto */
+    .sobre,
+    .transforma {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .sobre-imagem,
+    .sobre-texto,
+    .transforma-imagem,
+    .transforma-texto {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .transforma-imagem img {
+        height: auto;
+        max-height: 360px;
+    }
+
+    /* Grades e cartões */
+    .lista-projetos,
+    .localidades,
+    .o-que-e-conteudo,
+    .historia-conteudo,
+    .geracoes-conteudo,
+    .frentes-atuacao,
+    .ajudar-introducao,
+    .formas-apoio {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .card-projeto,
+    .card-apoio {
+        padding: 24px 20px;
+        min-width: 0;
+    }
+
+    .imagem-projeto {
+        height: 200px;
+    }
+
+    .projetos-fechamento {
+        margin-top: 45px;
+        padding: 35px 20px;
+    }
+
+    .projetos-fechamento h2 {
+        font-size: 25px;
+    }
+
+    /* Números de impacto */
+    .numeros-impacto {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .numero {
+        flex: 1 1 120px;
+        padding: 10px;
+    }
+
+    .numero h3 {
+        font-size: 38px;
+    }
+
+    /* Galeria */
+    .galeria-fotos {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .galeria-fotos img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Apoio */
+    .apoio-final {
+        width: 100%;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    /* Rodapé */
+    .rodape-conteudo {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding: 35px 22px;
+        text-align: center;
+    }
+
+    .rodape-links,
+    .rodape-contato {
+        align-items: center;
+    }
+
+    .rodape-final p {
+        white-space: normal;
+        line-height: 1.6;
+    }
+
+    /* Cards e textos longos */
+    .lista-localidades-contato .localidade-contato {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .lista-localidades-contato .localidade-contato,
+    .corporacao-ensaio-destaque {
+        flex-wrap: wrap;
+    }
+
+    /* Botões: respeitam a largura do celular */
+    .botao {
+        max-width: 100%;
+        white-space: normal;
+    }
+}
+
+/* Telas muito estreitas */
+@media (max-width: 400px) {
+
+    header {
+        padding: 18px 14px;
+    }
+
+    nav {
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero,
+    .sobre,
+    .impacto,
+    .projetos,
+    .transforma,
+    .participar,
+    .galeria,
+    .ajudar,
+    .sobre-hero,
+    .historia,
+    .nova-fase,
+    .onde-musica,
+    .o-que-e,
+    .atuacao,
+    .geracoes,
+    .proposito {
+        padding: 35px 16px;
+    }
+
+    .card-projeto,
+    .card-apoio {
+        padding: 22px 16px;
+    }
+}
